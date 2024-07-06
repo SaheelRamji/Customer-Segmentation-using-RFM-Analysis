@@ -16,22 +16,6 @@ Data preprocessing was crucial to ensure dataset quality. Steps included explori
 
 Identifying the correct number of segments was vital. We explored various clustering algorithms to understand the relationship between profitability and generated segments. The focus was not only on segmentation but also on how these segments correlate with profitability.
 
-Data Inspection and Cleaning
-Data inspection involved examining columns for data types and statistical characteristics, handling missing values, and addressing outliers. Temporal aspects were considered by converting 'InvoiceDate' to datetime format and extracting additional temporal dimensions. A 'TotalCost' column was added for enhanced analysis. This detailed process ensured a robust dataset for meaningful RFM analysis and segmentation.
-
-Results and Methods
-RFM Calculation & Segmentation
-RFM metrics were calculated by transforming 'InvoiceDate' to datetime and computing Recency, Frequency, and Monetary metrics. A dedicated RFM DataFrame was created, grouping data by 'CustomerID' and applying aggregation functions. The resulting DataFrame provided a comprehensive representation of customer behavior, setting the stage for segmentation.
-
-Customer Segmentation
-Five clustering methods were applied: K-Means, Hierarchical, DBSCAN, Agglomerative, and Gaussian Mixture Model (GMM). RFM scores were standardized, and a versatile function was used to handle each method. The resulting DataFrame included customer information, RFM scores, and segments assigned by each method. A correlation heatmap identified K-Means clustering as the most relevant method due to its highest negative correlation with total orders.
-
-Segment Profiling
-Segment profiling involved computing statistical characteristics such as mean and standard deviation for RFM scores and other key metrics within each segment. Visualizations like boxplots illustrated the distribution of RFM scores and recency within segments.
-
-Marketing Recommendations
-Pie charts and count plots visualized product preferences, geographic distribution, and order statuses within segments. Histograms depicted RFM score distribution, aiding in understanding segmentation effectiveness. Time analysis examined weekly and hourly order distribution, providing insights for operational and marketing strategies.
-
 Observations
 Segment 0: Most valuable, highest RFM scores, frequent buyers recently ceased purchasing.
 Segment 1: Weakest, lowest performance across all metrics, recent customers not spending significantly.
